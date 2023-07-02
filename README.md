@@ -1,1 +1,0 @@
-                                                                          BANG JANGAN DEADLINER BANG
