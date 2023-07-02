@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2023 at 10:58 AM
+-- Generation Time: Jul 02, 2023 at 02:24 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -83,7 +83,7 @@ CREATE TABLE `favorits` (
 INSERT INTO `favorits` (`id`, `user_id`, `hero_id`, `date`, `notes`, `rating`, `created_at`, `updated_at`) VALUES
 (1, 2, 2, '2023-10-20', 'I like when used skill 1 and it looks slippery when i wear it.', 9.00, '2023-06-30 23:18:05', '2023-07-01 01:03:14'),
 (2, 3, 1, '2023-12-12', 'This hero so annoying for enemy.', 9.10, '2023-06-30 23:18:05', '2023-07-01 01:02:18'),
-(4, 4, 3, '2023-07-01', 'This can bring me to glory.', 8.90, '2023-07-01 01:00:58', '2023-07-01 01:00:58');
+(6, 5, 3, '2023-07-02', 'This can bring me to glory.', 8.80, '2023-07-01 17:15:57', '2023-07-01 17:15:57');
 
 -- --------------------------------------------------------
 
@@ -109,9 +109,10 @@ CREATE TABLE `heroes` (
 --
 
 INSERT INTO `heroes` (`id`, `name`, `poster`, `weapon`, `role_id`, `special_id`, `difficult_id`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Vexana', '1688194506.webp', 'Duke Atticus\' Scepter', 2, 2, 2, 'Vexana was the majestic ruler of Necrokeep, the gentle mother of the undead, but also the only glimmer of light that penetrated the Mist, bringing hope to this cursed land shunned by both life and death.  Undying Hope Princess Vexana Gaius had never set foot out of Lumina City, nor did she have any desire to do so. The Moniyan capital was warm, opulent, and bursting with life. A ghastly fortress in the southern hinterlands was the last place she intended to spend the rest of her life in.  On the other hand, she knew she was bound to her father\'s will. Duke Atticus of Ridgeburg had offered the House of Gaius a union through marriage, and Lord Gaius deemed Vexana the most suitable match. And now, she had found herself alone in her carriage on a long ride south.', '2023-06-30 23:18:05', '2023-06-30 23:55:06'),
+(1, 'Vexana', '1688257218.webp', 'Duke Atticus\' Scepter', 2, 2, 2, 'Vexana was the majestic ruler of Necrokeep, the gentle mother of the undead, but also the only glimmer of light that penetrated the Mist, bringing hope to this cursed land shunned by both life and death.  Undying Hope Princess Vexana Gaius had never set foot out of Lumina City, nor did she have any desire to do so. The Moniyan capital was warm, opulent, and bursting with life. A ghastly fortress in the southern hinterlands was the last place she intended to spend the rest of her life in.  On the other hand, she knew she was bound to her father\'s will. Duke Atticus of Ridgeburg had offered the House of Gaius a union through marriage, and Lord Gaius deemed Vexana the most suitable match. And now, she had found herself alone in her carriage on a long ride south.', '2023-06-30 23:18:05', '2023-07-01 17:20:18'),
 (2, 'Lancelot', '1688194090.webp', 'Sword', 1, 5, 2, 'As the eldest son of Duke Baroque, Lancelot was born rebellious. Dead set on resisting the political marriage arranged for him by his father, he traveled the country and led a licentious life instead. After being wounded at a drunken brawl in a tavern, Lancelot was rescued by Odette and finally came to realize what his heart truly yearned for. The prodigal son made a repentant return and thus began his adventure across the Land of Dawn.In the [southwest] of the Moniyan Empire [lays] Castle Gorge that had fallen into decline due to the depletion of its famed gold mines.  As the oldest noble in the Empire, House Baroque ruled over Castle Gorge. The eldest son of Duke Baroque—Lancelot was a handsome young man with [unmatched] sword skills. He\'d received an all-round good education but also inherited his father\'s snobbery and haughtiness.  House Baroque had been in decline for years, and the duke was relying on loans to keep up a [façade]. To revive his family, the duke came up with a brilliant plan—to choose a d', '2023-06-30 23:18:05', '2023-06-30 23:48:10'),
-(3, 'Lesley', '1688198282.webp', 'Black Vulture', 3, 16, 2, 'Lesley grew up in the Vance household, where her father presided over the noble family\'s security. During an unexpected attack by a rival family, Lesley\'s father was killed. As the assailants approached the Vance household, Lesley took up her father\'s black long rifle and fulfilled her late father\'s mission. Tears rolled down Lesley\'s cheeks as she fired shot after shot, surprisingly, each one taking down an assassin. The final tear came as the final shot took down the last of the rival family\'s men.  Lesley was adopted by the Vance family, with the patriarch of the noble house even putting their sole heir, Harley under her tutelage. Harley, was a natural troublemaker, who used his talents in magic to unintentionally cause trouble for the Vance household. Only Lesley could keep Harley under control. Harley\'s troublemaking streak was the last part of warmth within Lesley\'s conscience.After hearing about how Harley had travelled to the dangerous Land of Dawn after defeating the Boss of Dark Magic, Lesley follow', '2023-06-30 23:18:05', '2023-07-01 00:58:02');
+(3, 'Lesley', '1688198282.webp', 'Black Vulture', 3, 16, 2, 'Lesley grew up in the Vance household, where her father presided over the noble family\'s security. During an unexpected attack by a rival family, Lesley\'s father was killed. As the assailants approached the Vance household, Lesley took up her father\'s black long rifle and fulfilled her late father\'s mission. Tears rolled down Lesley\'s cheeks as she fired shot after shot, surprisingly, each one taking down an assassin. The final tear came as the final shot took down the last of the rival family\'s men.  Lesley was adopted by the Vance family, with the patriarch of the noble house even putting their sole heir, Harley under her tutelage. Harley, was a natural troublemaker, who used his talents in magic to unintentionally cause trouble for the Vance household. Only Lesley could keep Harley under control. Harley\'s troublemaking streak was the last part of warmth within Lesley\'s conscience.After hearing about how Harley had travelled to the dangerous Land of Dawn after defeating the Boss of Dark Magic, Lesley follow', '2023-06-30 23:18:05', '2023-07-01 00:58:02'),
+(4, 'Hayabusa', '1688256658.jpg', 'Udumbara', 1, 23, 2, 'Hayabusa is the head of the Shadow Sect\'s second son. Since childhood, he grew up under his father\'s iron-handed rule, and while his ninjutsu could never rival that of his brother, he was a kind friend and family member to him. When Hayabusa learned that his brother had been harmed by Hanzo, he resolved to spend the rest of his days mastering ninjutsu, in order to hunt down and exact revenge upon him.In the north of the Cadia Riverlands there lies a thick forest within a canyon. All around is aesthetic beauty, yet with a harsh and dangerous air. Myriad waterfalls flow like lengths of white silk, the water resounding throughout the area as it\'s splashed high into the heavens. When the wind picks up, fog and cherry blossoms float in the air—this is the home of the ninja, the Scarlet Shadow', '2023-07-01 17:09:34', '2023-07-01 17:10:58');
 
 -- --------------------------------------------------------
 
@@ -229,7 +230,7 @@ INSERT INTO `specials` (`id`, `name`, `description`, `created_at`, `updated_at`)
 (14, 'Regen', 'Has the ability to regenerate lost HP during laning phases or clashes.', '2023-06-30 23:39:10', '2023-06-30 23:39:10'),
 (15, 'Crowd control', 'Capable of controlling multiple enemies at once.', '2023-06-30 23:39:38', '2023-06-30 23:39:38'),
 (16, 'Finisher', 'Capable of chasing enemies and shutting them down.', '2023-06-30 23:39:55', '2023-06-30 23:39:55'),
-(17, 'Burst', 'Quickly deals high damage with low cooldowns.', '2023-07-01 00:13:57', '2023-07-01 00:13:57');
+(23, 'Burst', 'Quickly deals high damage with low cooldowns.', '2023-07-01 06:28:39', '2023-07-01 06:28:39');
 
 -- --------------------------------------------------------
 
@@ -257,7 +258,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ro
 (1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$wtF2X0bUV0v.cZRwLb8ETuQADaF3CAwv59RuSF2HBghtLsWQbD6hq', 'admin', NULL, '2023-06-30 23:18:05', '2023-06-30 23:18:05'),
 (2, 'Muh Zaidan Ramdhan', 'muhammadzaidanramdhan509@gmail.com', NULL, '$2y$10$yNWvCjdmg3MudQ23edzhpuSf2PwceGkUN5BXZWWVKFNNfS.muAOg6', 'user', NULL, '2023-06-30 23:18:05', '2023-06-30 23:18:05'),
 (3, 'Dinda Maulidia', 'dindamaulidia@gmail.com', NULL, '$2y$10$mYWzmz4RNr9x2X9hxN9u1.lft7acNExGfWEhd.9N5i6sDCdMrtoTu', 'user', NULL, '2023-06-30 23:18:05', '2023-06-30 23:18:05'),
-(4, 'Agil Al-munawwir', 'agil@gmail.com', NULL, '$2y$10$P4HNAp6FiiRs2IWYwaw5SuaKB18lkTVn5yMUeWuDmsOzz53OIBQS.', 'user', NULL, '2023-06-30 23:18:05', '2023-07-01 01:54:35');
+(5, 'Ragil', 'agilalmunawir@gmail.com', NULL, '$2y$10$dfGljNegUO/MTEV8DumYMOm.RXE.7AEl2L0u2STAGa5enwz1xj2Kq', 'user', NULL, '2023-07-01 04:53:01', '2023-07-01 04:53:01');
 
 --
 -- Indexes for dumped tables
@@ -347,13 +348,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `favorits`
 --
 ALTER TABLE `favorits`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `heroes`
 --
 ALTER TABLE `heroes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -371,19 +372,19 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `specials`
 --
 ALTER TABLE `specials`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
