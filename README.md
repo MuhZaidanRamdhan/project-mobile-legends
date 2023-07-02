@@ -1,3 +1,1 @@
-BANG JANGAN DEADLINER BANG
-
-KERJAIN SECEPATNYA BANGG
+                                                                          BANG JANGAN DEADLINER BANG
