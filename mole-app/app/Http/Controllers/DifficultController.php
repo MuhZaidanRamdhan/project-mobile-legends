@@ -56,21 +56,21 @@ class DifficultController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Difficult $difficult)
+    public function edit(Difficult $difficulty)
     {
-        return view('difficulties.edit',compact('difficult'));
+        return view('difficulties.edit',compact('difficulty'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Difficult $difficult)
+    public function update(Request $request, Difficult $difficulty)
     {
         $validateData = $request->validate([
             'level' => 'required',
         ]);
 
-        $difficult->update($validateData);
+        $difficulty->update($validateData);
 
         return redirect('/difficulties')->with('success', 'data successfully updated!');
     }
@@ -78,9 +78,9 @@ class DifficultController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Difficult $difficult)
+    public function destroy(Difficult $difficulty)
     {
-        $difficult->delete();
+        $difficulty->delete();
         return redirect('/difficulties')->with('success', 'data deleted successfully!');
     }
 }

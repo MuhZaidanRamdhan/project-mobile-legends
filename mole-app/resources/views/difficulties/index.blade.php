@@ -40,14 +40,8 @@
                     <td>{{ $difficult->level }}</td>
                     <td>
                         <div class="d-flex justify-content-center">
-                            <a href="/difficulties/{{$difficult->id}}/edit" class="btn btn-warning" style="margin-right:3px;"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i>
-                            </a>
-                        <form action="/difficulties/{{$difficult->id}}" method="post">
-                            @csrf
-                            @method('DELETE')
+                            <a href="/difficulties/{{ $difficult->id }}/edit" class="btn btn-warning" style="margin-right:3px;"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a>
                             <a href="/difficulties/{{$difficult->id}}" class="btn btn-danger" data-confirm-delete="true"><i class="fa-regular fa-trash-can" style="color: #ffffff;"></i></a>
-                        </form>
-                    </div>
                     </div>
                     </td>
                 </tr>

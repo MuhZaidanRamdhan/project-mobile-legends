@@ -63,14 +63,8 @@
                     <td><p style="text-align: justify">{{ $hero->description }}</p></td>
                     <td>
                         <div class="d-flex justify-content-center">
-                            <a href="/heroes/{{$hero->id}}/edit" style="margin-right:3px;">
-                                <button class="btn btn-warning" type="submit"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></button>
-                            </a>
-                        <form action="/heroes/{{$hero->id}}" method="post">
-                            @csrf
-                            @method('DELETE')
+                            <a href="/heroes/{{$hero->id}}/edit" class="btn btn-warning" style="margin-right:3px;"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a>
                             <a href="/heroes/{{$hero->id}}" class="btn btn-danger" data-confirm-delete="true"><i class="fa-regular fa-trash-can" style="color: #ffffff;"></i></a>
-                        </form>
                     </div>
                     </td>
                 </tr>

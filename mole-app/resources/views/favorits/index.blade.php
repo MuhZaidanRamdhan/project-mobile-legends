@@ -52,14 +52,8 @@
                     <td>{{ $favorit->rating }}</td>
                     <td>
                         <div class="d-flex justify-content-center">
-                            <a href="/favorits/{{$favorit->id}}/edit" style="margin-right:3px;">
-                                <button class="btn btn-warning" type="submit"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></button>
-                            </a>
-                        <form action="/favorits/{{$favorit->id}}" method="post">
-                            @csrf
-                            @method('DELETE')
+                            <a href="/favorits/{{ $favorit->id }}/edit" class="btn btn-warning" style="margin-right:3px;"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a>
                             <a href="/favorits/{{$favorit->id}}" class="btn btn-danger" data-confirm-delete="true"><i class="fa-regular fa-trash-can" style="color: #ffffff;"></i></a>
-                        </form>
                     </div>
                     </td>
                 </tr>

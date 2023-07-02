@@ -49,7 +49,7 @@ class SpecialController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Special $special)
+    public function show(Special $specialty)
     {
         //
     }
@@ -57,22 +57,22 @@ class SpecialController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Special $special)
+    public function edit(Special $specialty)
     {
-        return view('specialties.edit', compact('special'));
+        return view('specialties/edit', compact('specialty'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Special $special)
+    public function update(Request $request, Special $specialty)
     {
         $validateData = $request->validate([
             'name' => 'required',
             'description' => 'required',
         ]);
 
-        $special->update($validateData);
+        $specialty->update($validateData);
 
         return redirect('/specialties')->with('success', 'Data successfully updated!');
     }
@@ -80,9 +80,9 @@ class SpecialController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Special $special)
+    public function destroy(Special $specialty)
     {
-        $special->delete();
+        $specialty->delete();
         return redirect('/specialties')->with('success', 'Data deleted succesfully!');
     }
 }

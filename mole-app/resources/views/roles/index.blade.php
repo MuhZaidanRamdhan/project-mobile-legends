@@ -44,13 +44,8 @@
                     <td>
                         <div class="d-flex justify-content-center">
                             <a href="/roles/{{$role->id}}/edit" style="margin-right:3px;" class="btn btn-warning">
-                            <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i>
-                            </a>
-                        <form action="/roles/{{$role->id}}" method="post">
-                            @csrf
-                            @method('DELETE')
+                            <i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a>
                             <a href="/roles/{{$role->id}}" class="btn btn-danger" data-confirm-delete="true"><i class="fa-regular fa-trash-can" style="color: #ffffff;"></i></a>
-                        </form>
                     </div>
                     </td>
                 </tr>

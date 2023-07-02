@@ -43,13 +43,8 @@
                     <td>{{ $special->description }}</td>
                     <td>
                         <div class="d-flex justify-content-center">
-                            <a href="/specialties/{{$special->id}}/edit" class="btn btn-warning" style="margin-right:3px;"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i>
-                            </a>
-                        <form action="/specialties/{{$special->id}}" method="post">
-                            @csrf
-                            @method('DELETE')
+                            <a href="/specialties/{{$special->id}}/edit" class="btn btn-warning" style="margin-right:3px;"><i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i></a>
                             <a href="/specialties/{{$special->id}}" class="btn btn-danger" data-confirm-delete="true"><i class="fa-regular fa-trash-can" style="color: #ffffff;"></i></a>
-                        </form>
                     </div>
                     </td>
                 </tr>

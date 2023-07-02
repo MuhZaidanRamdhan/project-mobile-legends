@@ -59,7 +59,7 @@
                     </select>
                 </div>
                 </div>
-                  <input type="submit" value="Update User" class="btn btn-primary">
+                  <input type="submit" value="add +" class="btn btn-primary">
             </form>
         </div>
     </div>

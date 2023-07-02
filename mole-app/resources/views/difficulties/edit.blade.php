@@ -23,13 +23,13 @@
             Difficulties Data
         </div>
         <div class="card-body">
-            <form method="POST" action="/difficulties/{{$difficult->id}}">
+            <form method="POST" action="/difficulties/{{$difficulty->id}}">
                 @csrf
                 @method('put')
                 <div class="mb-3 row">
                     <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">level </label>
                     <div class="col-sm-10">
-                      <input type="text" id="exampleFormControlInput1" class="form-control" name="level" value="{{$difficult->level}}">
+                      <input type="text" id="exampleFormControlInput1" class="form-control" name="level" value="{{$difficulty->level}}">
                     </div>
                   </div>
                 <input type="submit" value="Update Difficulties" class="btn btn-primary"></input>

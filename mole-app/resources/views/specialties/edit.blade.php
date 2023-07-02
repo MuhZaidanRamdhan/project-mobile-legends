@@ -23,19 +23,19 @@
             Specialties Data
         </div>
         <div class="card-body">
-            <form method="POST" action="/specialties/{{$special->id}}">
+            <form method="POST" action="/specialties/{{$specialty->id}}">
                 @csrf
                 @method('put')
                 <div class="mb-3 row">
                     <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">name </label>
                     <div class="col-sm-10">
-                      <input type="text" id="exampleFormControlInput1" class="form-control" name="name" value="{{$special->name }}">
+                      <input type="text" id="exampleFormControlInput1" class="form-control" name="name" value="{{$specialty->name }}">
                     </div>
                   </div>
                 <div class="mb-3 row">
                     <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Description </label>
                     <div class="col-sm-10">
-                      <input type="text" id="exampleFormControlInput1" class="form-control" name="description" value="{{$special->description }}">
+                      <input type="text" id="exampleFormControlInput1" class="form-control" name="description" value="{{$specialty->description }}">
                     </div>
                   </div>
                 <input type="submit" value="Update Specialties" class="btn btn-primary"></input>
