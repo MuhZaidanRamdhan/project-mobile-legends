@@ -81,7 +81,7 @@ class AuthController extends Controller
         $validateData['password'] = hash::make($validateData['password']);
 
         User::create($validateData);
-        return redirect('/login')->with('success','Register berhasil !');
+        return redirect('/login')->with('success','Register successfully!');
 
     }
     public function loginForm()
@@ -100,7 +100,7 @@ class AuthController extends Controller
             if ($user->role === 'admin') {
                 return redirect('/dasboard')->with('success', 'Login Successfully as admin');
             } else {
-                return redirect('/')->with('success', 'Login Successfully');
+                return redirect('/page')->with('success', 'Login Successfully');
             }
         }
 
@@ -108,5 +108,10 @@ class AuthController extends Controller
             'email' => 'Email atau password salah!',
         ]);
 
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect('/')->with('success','You have successfully logged out');
     }
 }

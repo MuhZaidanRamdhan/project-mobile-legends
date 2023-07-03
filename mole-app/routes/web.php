@@ -21,7 +21,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Home(landingpage)
-Route::get('/',[HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/page', [HomeController::class, 'page']);
 
 
 
@@ -30,39 +31,24 @@ Route::get('/dasboard', function () {
     return view('dasboard/index');
 });
 
-Route::get('/heroes', function () {
-    return view('heroes/index');
-});
-
 // For User
-Route::resource('/users',AuthController::class);
+
 
 
 // For Authentication
-Route::get('/register',[AuthController::class, 'registerForm']);
-Route::post('/register',[AuthController::class, 'register']);
-Route::get('/login',[AuthController::class, 'loginForm']);
-Route::post('/login',[AuthController::class, 'login']);
-
-
-// For Heroes
-Route::resource('/heroes', HeroController::class);
-
-
-// For Difficulties
-Route::resource('/difficulties', DifficultController::class);
-
-
-// For Roles
-Route::resource('/roles', RoleController::class);
-
-
-// For Specialties
-Route::resource('/specialties', SpecialController::class);
-
-
-// For Favorits Hero
-Route::resource('/favorits', FavoritController::class);
+Route::get('/register', [AuthController::class, 'registerForm']);
+Route::post('/register', [AuthController::class, 'register']);
+Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/logout', [AuthController::class, 'logout']);
 
 
 
+Route::group(['middleware' => ['auth', 'peran:admin']], function () {
+    Route::resource('/users', AuthController::class);
+    Route::resource('/heroes', HeroController::class);
+    Route::resource('/difficulties', DifficultController::class);
+    Route::resource('/roles', RoleController::class);
+    Route::resource('/specialties', SpecialController::class);
+    Route::resource('/favorits', FavoritController::class);
+});

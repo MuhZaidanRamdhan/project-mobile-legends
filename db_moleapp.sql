@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2023 at 02:24 AM
+-- Generation Time: Jul 03, 2023 at 01:27 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -219,7 +219,7 @@ INSERT INTO `specials` (`id`, `name`, `description`, `created_at`, `updated_at`)
 (2, 'Poke', 'Has a low cooldown ability that deals damage or inflicts disables from a long distance.', '2023-06-30 23:18:05', '2023-06-30 23:55:50'),
 (4, 'Push', 'Can quickly destroy towers at all points of the game.', '2023-06-30 23:35:10', '2023-06-30 23:35:10'),
 (5, 'Damage', 'Can consistently deal high damage at any points of the game.', '2023-06-30 23:35:34', '2023-06-30 23:47:37'),
-(6, 'Poke', 'Has a low cooldown ability that deals damage or inflicts disables from a long distance.', '2023-06-30 23:36:11', '2023-06-30 23:36:11'),
+(6, 'Charge', 'Has a guaranteed ability to dash fast into teamfights.', '2023-06-30 23:36:11', '2023-07-02 04:50:47'),
 (7, 'Initiator', 'Good at starting teamfights and can start important comebacks.', '2023-06-30 23:36:33', '2023-06-30 23:36:33'),
 (8, 'Magic damage', 'Deals high magic damage at any points of the game.', '2023-06-30 23:36:58', '2023-06-30 23:36:58'),
 (9, 'Mixed damage', 'Capable of inflicting both physical and magical damage towards the enemy.', '2023-06-30 23:37:18', '2023-06-30 23:37:18'),
@@ -258,7 +258,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `ro
 (1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$wtF2X0bUV0v.cZRwLb8ETuQADaF3CAwv59RuSF2HBghtLsWQbD6hq', 'admin', NULL, '2023-06-30 23:18:05', '2023-06-30 23:18:05'),
 (2, 'Muh Zaidan Ramdhan', 'muhammadzaidanramdhan509@gmail.com', NULL, '$2y$10$yNWvCjdmg3MudQ23edzhpuSf2PwceGkUN5BXZWWVKFNNfS.muAOg6', 'user', NULL, '2023-06-30 23:18:05', '2023-06-30 23:18:05'),
 (3, 'Dinda Maulidia', 'dindamaulidia@gmail.com', NULL, '$2y$10$mYWzmz4RNr9x2X9hxN9u1.lft7acNExGfWEhd.9N5i6sDCdMrtoTu', 'user', NULL, '2023-06-30 23:18:05', '2023-06-30 23:18:05'),
-(5, 'Ragil', 'agilalmunawir@gmail.com', NULL, '$2y$10$dfGljNegUO/MTEV8DumYMOm.RXE.7AEl2L0u2STAGa5enwz1xj2Kq', 'user', NULL, '2023-07-01 04:53:01', '2023-07-01 04:53:01');
+(5, 'Ragil', 'agilalmunawir@gmail.com', NULL, '$2y$10$dfGljNegUO/MTEV8DumYMOm.RXE.7AEl2L0u2STAGa5enwz1xj2Kq', 'user', NULL, '2023-07-01 04:53:01', '2023-07-01 04:53:01'),
+(6, 'Nur Laili Zakiyah', 'leliezakiyah@gmail.com', NULL, '$2y$10$O.nDdOpgrieWB9a7JV6IROgnrlMfx0G03jnILrVOWknmm.RjreUDG', 'user', NULL, '2023-07-02 04:23:29', '2023-07-02 04:23:29');
 
 --
 -- Indexes for dumped tables
@@ -384,7 +385,7 @@ ALTER TABLE `specials`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
