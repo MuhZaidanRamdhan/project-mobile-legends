@@ -1,101 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.landing')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary py-3" data-bs-theme="dark">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
-                    <a class="navbar-brand col-lg-3 me-0" href="#"><img src="/assets/img/mlbb.png" alt="" width="120px" height="40px"></a>
-                    <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/movies">Movies</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/genres">Genres</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/reviews">Reviews</a>
-                        </li>
-                    </ul>
-                <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-                    <a href="/login" class="btn btn-warning">Login</a>
-                </div>
-                </div>
-            </div>
-        </nav>
-
-        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-            <div class="container">
-                {{-- @if (session('success'))
-                    <div class="alert alert-success">
-                        {{ session('success') }}
-                    </div>
-                @endif --}}
-                <div class="container-fluid py-5">
-                    <h1 class="display-5 fw-bold">Watch anywhere. Cancel anytime.</h1>
-                    <p class="col-md-8 fs-4">Dapatkan pembaruan tentang rilis film terkini, trailer eksklusif, dan berita terbaru dari dunia perfilman. Tunggu apa lagi? Mulailah menjelajahi dunia hiburan dengan FilmFlix sekarang juga!</p>
-                    <button class="btn btn-warning btn-lg" type="button">Daftar Sekarang!</button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="album py-5 bg-body-tertiary">
-            <div class="container">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm">
-                            <img src="" alt="DUMMY">
-                            <div class="card-body">
-                                <h4 class="card-title"><a href="#" style="text-decoration: none"></a></h4>
-                                <p class="card-text"></p>
-                                <p class="card-text"></p>
-                                <p class="card-text"></p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary"></button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary"></button>
-                                    </div>
-                                    <small class="text-body-secondary"></small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <div class="container">
-        <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
-            </ul>
-            <p class="text-center text-body-secondary">&copy; 2023 Company, Inc</p>
-        </footer>
+@section('content')
+<section class="hero" id="about">
+  <div class="container">
+  <div class="text" data-aos="zoom-in" data-aos-duration="1000">
+      Welcome to Website for Mobile Legends Lovers in Indonesia!
+     </div>
+     <div class="text-page">
+      <p data-aos="zoom-in-down" data-aos-duration="1500">
+        You can see a lot of knowledge about the history of heroes and what parts of these heroes! and many others that you can find out about <b class="text-secondary">Mobile Legends!</b> and here you can join our community, namely <b class="text-secondary">Mole Lovers!</b></p>
     </div>
-    @include('sweetalert::alert')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-</body>
+     <div class="buttons">
+        <a href="/about" class="btn btn-dark shadow-sm" data-aos="zoom-out-left" data-aos-duration="1500">Read More!</a>
+        <a href="/register" class="btn btn-outline-secondary shadow-sm" data-aos="zoom-out-left" data-aos-duration="1500">Register</a>
+      </div>
+      <div class="text-header" data-aos="zoom-in-down" data-aos-duration="1500">
+        <span class="text-center" style="color: #002D74;">You can see our social media here!</span>
+        <div class="icons d-flex mt-2 justify-content-start">
+          <img src="assets/img/icon_ig.svg" alt="icons" style="width: 30px;">
+          <button class="button btn btn-light shadow-sm">
+            <span class="text-center">Instagram</span>
+          </button>
+          <img src="assets/img/icon_tiktok.svg" alt="icons" style="width: 30px;">
+          <button class="button btn btn-light shadow-sm">
+            <span class="text-center">TikTok</span>  
+          </button>                
+          <img src="assets/img/icon_youtube.svg" alt="icons" style="width: 35px;">
+          <button class="button btn btn-light shadow-sm">
+            <span class="text-center">Youtube</span>  
+          </button>
+        </div>
+      </div>  
+  </div>
+    <img src="assets/img/icon2.svg" alt="hero-img" style =" width:83%;" data-aos="zoom-in-down" data-aos-duration="1500">
+</section>
 
-</html>
+<!--end-->
+ 
+<!--features-->
+<div class="title-section" id="features">
+<h3>Featured Heroes &#11088;</h3>
+<p class="features-paragraf">This is an example of the heroes that we provide on our website.</p>
+</div>
+<section class="section-card">
+@foreach ($heroes as $hero)
+<a href="/page/{{$hero->id}}">
+    <div class="card shadow-sm" style=" width: 17rem; height: 25rem;">
+      <img src="assets/img/{{$hero->poster}}" class="card-img-top" alt="..." height="100%"
+        style="object-fit:1/1; background-size:cover; background-position:center; border-radius:2%" class="rounded-2">
+      </div>
+  </a>
+@endforeach
+</section>
+
+<!--end-->
+
+<!--fav hero-->
+<section class="title-fav-L" id="FavoriteHeroes">
+  <div class="container mt-5">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-md-4 text-center" data-aos="zoom-in-right" data-aos-duration="800" id="title-fav">
+        <h2 style="text-align:center;">Favorite Heroes &#11088;</h2>  
+        <p class="fw-light">These are some of the heroes that are often used by most players.</p>
+      </div>
+        <div class="col-md-8 d-flex justify-content-center items-center gap-5">
+          @foreach ($favorits as $favorit)
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{$favorit->user->name}}</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Hero: {{$favorit->hero->name}}</h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Date: {{$favorit->date}}</h6>
+                <p class="card-text">{{$favorit->notes}}</p>
+              </div>
+          </div>            
+          @endforeach                
+      </div>     
+      </div>             
+    </div>
+  </div>      
+</section>
+@endsection

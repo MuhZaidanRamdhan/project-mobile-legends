@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary :#3155e7;
+    --primary-dark :#002D74;
+    --black :#010101;
+    --gray-1:#788190;
+    --gray-2:#d3d4db;
+    --white:#ffff;
+    --body:#fefefe;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body);
+}
+
+
+.btn {
+    border-radius: 8px;
+}
+
+.buttons {
+    border-radius: 10px;
+}
+
+.buttons .btn:hover {
+    background-color: #002D74;
+}
+
+.navbar .btn:hover{
+    background-color: #002D74;
+    transition: all 0.3s;
+}
+
+.navbar .btn-outline-secondary {
+    border: 1px solid var(--gray-2);
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 10px 16px;
+}
+
+.navbar {
+    padding: 32px 0;
+}
+
+.nav-link {
+    position: relative;
+    margin-left: 20px;
+    font-size: 15px;
+    transition: all 0.3s;
+    color: var(--black);
+}
+
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: var(--black);
+}
+
+.navbar-nav .nav-link:hover {
+    color: #002D74;
+}
+
+.icons .button {
+    border: none;
+    border-radius: 10px;
+    color: #010101;
+    box-shadow: 10px;
+    margin-right: 10px;
+    
+}
+.icons .button:hover{
+    background-color: #002D74;
+    border-radius: 5px;
+    color: #fefefe;
+
+    
+}
+
+
+section.hero {
+    margin:1rem 4rem 4rem 4rem;
+    display: flex;
+    align-items: center;
+}
+
+section.hero .text {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 2rem;
+    color: var(--black);
+}
+
+.buttons {
+    padding-top: 1rem;
+    padding-bottom:2rem ;
+}
+
+.buttons .btn {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+#title-hero {
+    padding:3rem 0;
+}
+
+#card-hero{
+    padding-bottom: 2rem;
+ }
+
+.title-section {
+    padding-top: 4rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.title-fav-L {
+    margin:10rem 0 28rem 0;
+}
+
+ .section-card {
+    text-align: center;
+    margin: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+ .section-card-fav {
+    margin: 4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .fav-style {
+    text-align: center;
+  }
+
+  .but-create {
+    margin: 2rem 4rem 0 0;
+    text-align: end;
+    padding: 2rem;
+  }
+
+  #but-nav {
+    width: 70px;
+    font-size: 0.8rem;
+    padding: 7px 10px;
+  }
+
+  .sec-fav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
+
+  #card-fav {
+    width: 18rem;
+    height: 12rem;
+    margin: 1rem 1.2rem;
+  }
+  
+  .section-card .card {
+    margin: 1.5rem;
+    border-radius: 50%;
+    height: 450px;
+  }
+#text-card {
+    font-size: 20px;
+}
+#card-detail {
+    margin-left: -4rem;
+}
+ #FavoriteHeroes {
+    padding-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+.owner-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.figure-caption {
+    text-align: center;
+}
+.figure-caption span {
+    font-style: italic;
+}
+
+.figure {
+    text-align: center;
+    padding: 4rem;
+}
+
+
+#img-owner {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+#img-about {
+    width: 500px;
+    height: 500px;
+}
+
+#img-list {
+    width: 500px;
+    height: 500px;
+    object-fit:1/1; 
+    background-size:cover; 
+    background-position:center; 
+    border-radius:2%;
+}
+
+
+ #content-fav {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+ }
+
+ .wrapper {
+    margin-top: 5rem;
+ }
+
+/* #card-hero {
+    width: 200px;
+    height: 200px;
+} */
+
+@media (max-width: 1024px) {
+    
+    #card-detail {
+        margin-left: -1rem;
+    }
+    #img-about {
+        width: 290px;
+        height: 290px;
+    }
+}
+@media (max-width: 768px) {
+
+
+    html{
+        font-size: 70%;
+    }
+    #card-detail {
+        margin-left: 0;
+    }
+
+    .but-create {
+        margin-right: 0;
+        padding-right: 10px;
+    }
+
+    #img-about {
+        display: none;
+    }
+    #img-list {
+        width: 300px;
+    }
+
+    #card-fav {
+        width: 1500px;
+     }
+     #title-fav {
+        padding:0;
+        padding-bottom: 3rem;
+    }
+
+     .buttons .btn {
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 24px;
+    }
+    .title-fav-L {
+        margin-bottom: 10rem;
+    }
+
+    #but-nav {
+        margin-left: 3rem;
+        width: 50px;
+        padding: 0;
+    }
+
+    .owner-body {
+        margin: 0;
+    }
+
+    .navbar #mole-app {
+        display: none;
+    }
+
+    section.hero {
+        padding: 10rem 0;
+    }
+
+    section.hero .text {
+        padding-bottom: 0.8rem;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 2rem;
+        color: var(--black);
+    }
+
+    .hero img{
+        margin:0;
+        display:none;
+     }
+
+     .section-card {
+        margin: 4rem 0;
+     }
+
+     #text-mole {
+        display: none;
+     }
+
+     #card-hero{
+        padding-bottom: 4rem;
+     }
+
+}
+@media (max-width: 450px){
+    
+    html {
+        font-size: 55%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #img-list {
+        width: 400px;
+    }
+
+    
+
+    .buttons .btn {
+        font-size: 1px;
+        font-weight: bold;
+        line-height: 24px;
+    }
+
+    .hero {
+        padding: 6rem 0;
+    }
+
+    .title-section {
+        margin-top: 18rem;
+    }
+
+    
+  
+    .hero img{
+       margin:0;
+       display:none;
+    }
+    #card-detail {
+        margin-left: 0;
+    }
+    section.hero .text {
+        padding-bottom: 0.8rem;
+        padding-right: 0;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 3rem;
+        color: var(--black);
+    }
+    .buttons .btn {
+        font-size: 8px;
+        font-weight: bold;
+        line-height: 24px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    #img-list {
+        width: 300px;
+        height: 300px;
+    }
+}

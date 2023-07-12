@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DifficultController;
 use App\Http\Controllers\FavoritController;
+use App\Http\Controllers\FavourController;
 use App\Http\Controllers\HeroController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RoleController;
@@ -21,17 +22,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Home(landingpage)
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/page', [HomeController::class, 'page']);
+Route::get('/about',function(){return view('about');});
+Route::get('/favorit',function(){return view('favorite');});
+Route::get('/contact',function(){return view('contact');});
+Route::get('/', [HomeController::class, 'index'])->middleware('guest');
+Route::get('/page', [HomeController::class, 'page'])->middleware('web','auth');
+Route::get('/page/{id}',[HomeController::class,'show']);
+Route::get('/list',[HomeController::class,'list']);
+Route::get('/favorit',[FavourController::class,'index']);
+Route::get('/favcreate',[FavourController::class,'create']);
+Route::post('/favorit',[FavourController::class,'store']);
 
 
-
-// For Dasboard
-Route::get('/dasboard', function () {
-    return view('dasboard/index');
-});
-
-// For User
 
 
 
@@ -45,6 +47,7 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 
 Route::group(['middleware' => ['auth', 'peran:admin']], function () {
+    Route::get('/dasboard', function () {return view('dasboard/index');});
     Route::resource('/users', AuthController::class);
     Route::resource('/heroes', HeroController::class);
     Route::resource('/difficulties', DifficultController::class);

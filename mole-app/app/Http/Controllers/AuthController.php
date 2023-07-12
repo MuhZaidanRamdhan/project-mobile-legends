@@ -86,7 +86,12 @@ class AuthController extends Controller
     }
     public function loginForm()
     {
-        return view('auth.login');
+        try {
+            return view('auth.login');
+        } catch (\Exception $e) {
+            // Tangkap exception session timeout dan redirect ke halaman login
+            return redirect('/')->with('message', 'Sesi Anda telah habis. Silakan login kembali.');
+        }
     }
     public function login(Request $request)
     {
