@@ -106,13 +106,5 @@
         <span>Frontend</span>
       </figcaption>
     </figure>
-  </div>
-  <!-- End Section -->
-
-  <!-- Start Brands -->
--
-
-           
-      
+  </div>  
 @endsection
-  <!--End Brands-->  

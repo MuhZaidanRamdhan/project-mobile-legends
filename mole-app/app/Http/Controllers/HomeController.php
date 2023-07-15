@@ -21,9 +21,7 @@ class HomeController extends Controller
     {
         $publics = User::all();
         $heroes = Hero::inRandomOrder()->limit(3)->get();
-        // $users = User::whereNotIn('id', [1])->inRandomOrder()->limit(3)->get();
         $user = Auth::user();
-        // $favorits = Favorit::where('user_id', $user->id)->with('hero')->get();
         $favorits = Favorit::inRandomOrder()->limit(3)->get();
         $sessionId = session()->getId();
 

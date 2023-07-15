@@ -90,7 +90,7 @@ class AuthController extends Controller
             return view('auth.login');
         } catch (\Exception $e) {
             // Tangkap exception session timeout dan redirect ke halaman login
-            return redirect('/')->with('message', 'Sesi Anda telah habis. Silakan login kembali.');
+            return redirect('/')->with('message', 'Your session has timed out. Please login again.');
         }
     }
     public function login(Request $request)
@@ -110,7 +110,7 @@ class AuthController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'Email atau password salah!',
+            'email' => 'Incorrect email or password',
         ]);
 
     }
