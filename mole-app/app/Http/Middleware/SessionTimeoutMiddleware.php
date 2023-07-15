@@ -34,7 +34,7 @@ class SessionTimeoutMiddleware
             if (time() - $lastActivity > $timeoutMinutes * 30) {
                 Auth::logout();
                 Session::flush();
-                return redirect('/')->with('warning', 'Sesi Anda telah habis. Silakan login kembali.');
+                return redirect('/')->with('warning', 'Your session has timed out. Please login again.');
             }
         }
 
