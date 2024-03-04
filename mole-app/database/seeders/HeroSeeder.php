@@ -15,7 +15,7 @@ class HeroSeeder extends Seeder
     {
         Hero::Create([
             'name' => 'Vexana',
-            'poster' => 'image.png',
+            'poster' => '1688126292.webp',
             'weapon' => "Duke Atticus' Scepter",
             'role_id' => 2,
             'special_id' => 1,
@@ -24,7 +24,7 @@ class HeroSeeder extends Seeder
         ]);
         Hero::Create([
             'name' => 'Lancelot',
-            'poster' => 'image.png',
+            'poster' => '1688126038.webp',
             'weapon' => 'Sword',
             'role_id' => 1,
             'special_id' => 1,
@@ -33,7 +33,7 @@ class HeroSeeder extends Seeder
         ]);
         Hero::Create([
             'name' => 'Lesley',
-            'poster' => 'image.png',
+            'poster' => '1688198282.webp',
             'weapon' => 'Black Vulture',
             'role_id' => 3,
             'special_id' => 1,
